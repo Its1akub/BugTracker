@@ -1,5 +1,7 @@
 const { REST, Routes, SlashCommandBuilder } = require("discord.js");
-const config = require("../../config/discord.config.json");
+const { loadConfig } = require("./configLoader");
+const config = loadConfig("discord.config.json");
+
 
 const commands = [
     new SlashCommandBuilder()
@@ -142,20 +144,32 @@ const commands = [
                 .setDescription("JSON soubor")
                 .setRequired(true)
         )
+        .toJSON(),
+    new SlashCommandBuilder()
+        .setName("bhelp")
+        .setDescription("commands help")
         .toJSON()
 ];
 
-const rest = new REST({ version: "10" }).setToken(config.token);
+async function registerCommands() {
+    const rest = new REST({ version: "10" }).setToken(config.token);
 
-(async () => {
     try {
         console.log("Registering slash commands...");
         await rest.put(
-            Routes.applicationCommands(config.clientId),
+            Routes.applicationGuildCommands(
+                config.clientId,
+                config.guildId
+            ),
             { body: commands }
         );
         console.log("Commands registered!");
     } catch (err) {
-        console.error(err);
+        console.error("Failed to register commands:", err);
+        throw err;
     }
-})();
+}
+
+module.exports = {
+    registerCommands
+};

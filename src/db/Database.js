@@ -1,5 +1,8 @@
 const mysql = require("mysql2/promise");
-const config = require("../../config/db.config.json");
+
+const {loadConfig} = require("../../setup/ConfigLoader");
+
+const config = loadConfig("db.config.json");
 
 const pool = mysql.createPool({
     ...config,
@@ -11,11 +14,10 @@ const pool = mysql.createPool({
 module.exports = {
     query: (sql, params) => pool.execute(sql, params),
 
-    getConnection: _ =>{
-        return pool.getConnection();
-    },
     transaction: async (callback) => {
-        const conn = await pool.getConnection();
+
+        /** @type {import('mysql2/promise').PoolConnection} */
+        const conn = pool.getConnection();
         try {
             await conn.beginTransaction();
             const result = await callback(conn);

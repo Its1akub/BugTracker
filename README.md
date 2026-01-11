@@ -114,7 +114,7 @@ npm run build:app
 
 ---
 
-## 7️⃣ Ovládání bota
+## 9️⃣ Ovládání bota
 
 Příkazy:
 
@@ -137,7 +137,29 @@ Příkazy:
 
 
 * `/import` → importování bugů pomocí .json souborů
-
+  
+struktura .json souboru je nasledující:  
+```json
+{
+  "projects": [
+    {
+      "name": "Discord Bot",
+      "budget": 15000,
+      "is_active": true,
+      "bugs": [
+        {
+          "title": "Slash command nefunguje",
+          "priority": "HIGH"
+        },
+        {
+          "title": "Chyba v databázi",
+          "priority": "MEDIUM"
+        }
+      ]
+    }
+  ]
+}
+```
 
 
 
@@ -145,7 +167,7 @@ Příkazy:
 
 ---
 
-## 8️⃣ Požadavky
+## 🔟 Požadavky
 
 * Windows 10+
 * MySQL 

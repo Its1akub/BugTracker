@@ -31,7 +31,7 @@ async function setupDatabase() {
 
         await connection.changeUser({ database: dbName });
 
-        const schemaPath = path.join(__dirname, "sql", "schema.sql");
+        const schemaPath = path.join(process.cwd(), "sql", "schema.sql");
         if (!fs.existsSync(schemaPath)) {
             console.error(`SQL file not found: ${schemaPath}`);
             process.exit(1);
@@ -41,7 +41,7 @@ async function setupDatabase() {
         console.log("Database schema initialized ✅");
 
 
-        const procsPath = path.join(__dirname, "sql", "script.sql");
+        const procsPath = path.join(process.cwd(), "sql", "script.sql");
         if (!fs.existsSync(procsPath)) {
             console.error(`SQL file not found: ${procsPath}`);
             process.exit(1);

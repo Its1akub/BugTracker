@@ -2,9 +2,14 @@
   "name": "bugtracker",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "bin": {
+    "setup": "setup/SetupScript.js",
+    "app": "app.js"
+  },
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:setup": "pkg setup/SetupScript.js --targets node18-win-x64 --output dist/setup.exe",
+    "build:app": "pkg app.js --targets node18-win-x64 --output dist/app.exe"
   },
   "keywords": [],
   "author": "",

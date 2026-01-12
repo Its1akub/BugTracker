@@ -1,6 +1,8 @@
 # README – BugTracker Discord Bot
 
 * TestCase jsou v doc
+  * TestReport dělej takto: System → pak Functional → pak errors  
+
 * Stáhni si nejnovější [release](https://github.com/Its1akub/BugTracker/releases)
 
 ## 1️⃣ Vytvoření Discord Bota
@@ -34,6 +36,7 @@
 * a pak nasleduj tento postup
   * Discord → **User Settings → Advanced**
   * Zapni **Developer Mode**
+  * Vytvoř discord server
   * Pravým klikem na server → **Copy Server ID**
 
 ---
@@ -77,6 +80,7 @@
 ---
 
 ## 6️⃣ Spuštění projektu 
+* ### **Kdyz si naklonujete projekt z repozitáře, jinak můžete přeskočit**
 
 ```bash
 npm install
@@ -87,6 +91,7 @@ node app.js
 ---
 
 ## 7️⃣ Build do `.exe`
+* ### **Kdyz si naklonujete projekt z repozitáře, jinak můžete přeskočit**
 
 Používá se **pkg**.
 
@@ -110,7 +115,21 @@ npm run build:app
 
 ---
 
-## 8️⃣ Výsledné soubory
+## 8️⃣ Výsledné soubory 
+* tyto soubory spustíte tak, že v cmd nebo powershellu otevřete složku
+  
+* v cmd napišete
+
+```cmd
+setup.exe
+```
+
+* v powersehllu
+  
+```powershell
+.\setup.exe
+```
+* Jako první musíte setup pak app
 
 * `setup.exe` – inicializace databáze a discord příkazů
 * `app.exe` – samotný Discord bot

@@ -65,7 +65,7 @@ FROM bug_comments bc
 
 
 
-CREATE PROCEDURE IF NOT EXISTS assign_bug_to_user(
+CREATE PROCEDURE assign_bug_to_user(
     IN p_bug_id INT,
     IN p_user_id INT,
     IN p_assign_user_id INT

@@ -1,10 +1,11 @@
 # README – BugTracker Discord Bot
 
-# TestCase jsou v doc
+* TestCase jsou v doc
+* Stáhni si nejnovější [release](https://github.com/Its1akub/BugTracker/releases)
 
 ## 1️⃣ Vytvoření Discord Bota
 
-1. Otevři **Discord Developer Portal** https://discord.com/developers/applications
+1. Otevři **[Discord Developer Portal](https://discord.com/developers/applications)** 
 2. Klikni **New Application**
 3. Zadej název aplikace
 4. V levém menu otevři **Bot**

@@ -144,7 +144,6 @@ struktura .json souboru je nasledující:
   "projects": [
     {
       "name": "Discord Bot",
-      "budget": 15000,
       "is_active": true,
       "bugs": [
         {

@@ -4,6 +4,7 @@
   * TestReport dělej takto: System → pak Functional → pak errors  
 
 * Stáhni si nejnovější [release](https://github.com/Its1akub/BugTracker/releases)
+* Při problemu napis na mailto:jacobspernoga@gmail.com
 
 ## 1️⃣ Vytvoření Discord Bota
 

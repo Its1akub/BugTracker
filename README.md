@@ -1,5 +1,7 @@
 # README – BugTracker Discord Bot
 
+# TestCase jsou v doc
+
 ## 1️⃣ Vytvoření Discord Bota
 
 1. Otevři **Discord Developer Portal** https://discord.com/developers/applications

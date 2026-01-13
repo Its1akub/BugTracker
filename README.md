@@ -6,6 +6,13 @@
 * Stáhni si nejnovější [release](https://github.com/Its1akub/BugTracker/releases)
 * Při problemu napis na mailto:jacobspernoga@gmail.com
 
+## Požadavky
+
+* Windows 10+
+* MySQL 
+* Přístup k Discord serveru
+* Node.js
+
 ## 1️⃣ Vytvoření Discord Bota
 
 1. Otevři **[Discord Developer Portal](https://discord.com/developers/applications)** 
@@ -189,11 +196,6 @@ struktura .json souboru je nasledující:
 
 ---
 
-## 🔟 Požadavky
 
-* Windows 10+
-* MySQL 
-* Přístup k Discord serveru
-* Node.js
 
 
